@@ -1,0 +1,8 @@
+<h2>Welcome to Chaguo Lako</h2>
+<p id="notice"><%= notice %></p>
+<% if !admin_is_logged_in? %>
+	<%= link_to "Register", new_voter_path %> | 
+	<%= link_to "Sign In", new_session_path %>
+<% end %>
+
+<p>Register to have your opinion</p>

@@ -1,0 +1,16 @@
+<h3>Sign In</h3>
+<%= form_tag sessions_path do %>
+	<p id="notice"><%= notice %></p>
+	<p>
+		<%= label_tag :Username %>
+		<%= text_field_tag :username %>
+	</p>
+	<p>
+		<%= label_tag :Password %>
+		<%= password_field_tag :password %>
+	</p>
+	<p class = "button">
+		<%= submit_tag "Login" %> Don't have an account?
+		<%= link_to " Register", new_voter_path %>
+	</p>
+<%end%>

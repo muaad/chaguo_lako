@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ChaguoLako</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+	<%= link_to image_tag("/assets/nds_logo.jpg"), root_path, :class => "logo" %>
+	<h1>Chaguo Lako</h1>
+	<hr/>
+
+    <%= yield %>
+<% if admin_is_logged_in? %>
+	<%= session[:user].username %>
+	<%= link_to "Log out", log_out_path %>	
+<% end %>
+</body>
+</html>
